@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    app: ["./src/index.jsx"]
+    app: ["./src/index.js"]
   },
 
   output: {
@@ -9,6 +9,7 @@ module.exports = {
     library: 'ReactFormBuilder',
     libraryTarget: 'umd',
   },
+  
 
   externals: {
     //don't bundle the 'react' npm package with our bundle.js
@@ -16,7 +17,7 @@ module.exports = {
     'react': 'react',
     'react-dom': 'react-dom',
     'react-datepicker': 'react-datepicker',
-    'react/addons': 'react/addons',
+    //'react/addons': 'react/addons',
     'classnames': 'classnames',
     'jquery': 'jquery',
     'bootstrap': 'bootstrap'
@@ -39,6 +40,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.jsx', '.css', '.scss']
+    extensions: [ '.js', '.json', '.jsx', '.css', '.scss']
   }
 }
+
