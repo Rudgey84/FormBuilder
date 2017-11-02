@@ -1,6 +1,6 @@
 {
-  "presets": [
-    "es2015",
-    "react"
-  ]
-}
+  "presets": ["react", "env" , "stage-0"],
+  "plugins": [
+    ["react-html-attrs", "transform-class-properties", "transform-decorators-legacy", "transform-object-rest-spread"]
+  ] 
+  }

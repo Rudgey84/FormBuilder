@@ -1,6 +1,13 @@
+var path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+  filename: path.resolve(__dirname, './css/application.css.scss'),
+});
+
 module.exports = {
   entry: {
-    app: ["./src/index.js"]
+    app: "./src/index.js"
   },
 
   output: {
@@ -23,24 +30,42 @@ module.exports = {
     'bootstrap': 'bootstrap'
   },
 
-  module: {
+  module:  {
     loaders: [
       {
         test: /.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
-        }
+          presets: [ 'env', 'react', 'stage-0'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy', 'transform-object-rest-spread'],       
+        },
       },
       {
-        test: /\.scss$/,
-        loader: "style-loader!css-loader!sass-loader"
-      }
+        test: /\.(css|scss)$/,
+        use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [{
+                    loader: 'css-loader',
+                    options: {
+                        modules: true,
+                        importLoaders: 1,
+                        sourceMap: false,
+                    },
+                },                
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        sourceMap: false,
+                        includePaths: ["css", "./css"]
+                    },
+                },
+            ],
+        }),
+    },
     ]
   },
-  resolve: {
-    extensions: [ '.js', '.json', '.jsx', '.css', '.scss']
-  }
+  plugins: [
+    extractSass
+]
 }
-

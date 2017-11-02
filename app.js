@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import DemoBar from './demobar';
 import FormBuilder from "./src/index";
 import * as variables from './variables'
+import "babel-polyfill";
 
 // Add our stylesheets for the demo.
 require('./css/application.css.scss');
+
 
 ReactDOM.render(
   <FormBuilder.ReactFormBuilder variables={variables} />,
