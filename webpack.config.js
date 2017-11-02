@@ -7,12 +7,12 @@ const extractSass = new ExtractTextPlugin({
 });
 
  module.exports = {
-  entry:  "./app.js",
 
-  output: {
-    filename: "app.js",
-    path: __dirname + "/build",
-  },
+    entry:  "./app.js",
+    output: {
+        filename: "app.js",
+        path: __dirname + "/build",
+            },
 
   module: {
     loaders: [
