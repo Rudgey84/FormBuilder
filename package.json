@@ -5,7 +5,7 @@
   "main": "lib/app.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --content-base src --inline --hot",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --inline --hot",
     "dist": "webpack -p --config webpack.production.config.js"
   },
   "repository": {
@@ -27,13 +27,9 @@
     "react-forms-builder": "git+https://github.com/Rudgey84/FormBuilder.git",
     "react-select": "^1.0.0-rc.10",
     "react-signature-pad": "^0.0.6",
-    "react-sortable-items": "^0.0.12",
     "react-textarea-autosize": "^5.1.0",
     "reflux": "^6.4.1",
     "xss": "^0.3.4"
-  },
-  "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -71,6 +67,5 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },
-  "homepage": "https://github.com/blackjk3/react-form-builder#readme",
   "private": true
 }
