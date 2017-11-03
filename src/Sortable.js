@@ -5,14 +5,15 @@ var ReactDOM = require('react-dom');
 var ReactUpdate = require('immutability-helper');
 var cx = require('classnames');
 var createReactClass = require('create-react-class');
+import PropTypes from 'prop-types';
 
 var CloneWithProps = React.cloneElement;
 
 module.exports = createReactClass({
   displayName: 'Sortable',
   propTypes: {
-    onSort: React.PropTypes.func,
-    horizontal: React.PropTypes.bool,
+    onSort: PropTypes.func,
+    horizontal: PropTypes.bool,
     sensitivity: function(props, propName, componentName) {
       if (isNaN(parseFloat(props[propName])) && !isFinite(props[propName]) || props[propName] < 0 || props[propName] > 1) {
         return new Error('sensitivity must be a number from 0 to 1.');
@@ -24,13 +25,13 @@ module.exports = createReactClass({
       Note that anything below an undraggable element can be moved above it.
       This option takes precedence over floatUndraggables if both are set to true.
     */
-    sinkUndraggables: React.PropTypes.bool,
+    sinkUndraggables: PropTypes.bool,
     /**
       See sinkUndraggables. This won't allow sorting above undraggable items.
       This defers to sinkUndraggables if both are set to true.
     */
-    floatUndraggables: React.PropTypes.bool,
-    minDragDistance: React.PropTypes.number
+    floatUndraggables: PropTypes.bool,
+    minDragDistance: PropTypes.number
   },
   getDefaultProps: function() {
     return {
