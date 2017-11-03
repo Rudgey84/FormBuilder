@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {EventEmitter} from 'fbemitter';
 import FormValidator from './form-validator';
-import {Header,Paragraph,Label,LineBreak,TextInput,NumberInput,TextArea,Dropdown,Image,Checkboxes,DatePicker,RadioButtons,Rating,Tags,Signature,HyperLink,Download,Camera,Range} from './form-elements';
+import {Header,Paragraph,Label,LineBreak,TextInput,NumberInput,TextArea,Dropdown,Image,Checkboxes,DatePicker,RadioButtons,Rating,Tags,Signature,HyperLink,Download,Camera} from './form-elements';
 import moment from 'moment';
 
 export default class ReactForm extends React.Component {
@@ -221,8 +221,8 @@ export default class ReactForm extends React.Component {
           return <Download download_path={this.props.download_path} mutable={true} key={`form_${item.id}`} data={item} />
         case 'Camera':
           return <Camera mutable={true} key={`form_${item.id}`} data={item} />
-        case 'Range':
-          return <Range ref={item.field_name} read_only={this.props.read_only} handleChange={this.handleChange} mutable={true} key={`form_${item.id}`} data={item} defaultValue={this.props.answer_data[item.field_name]} />
+        // case 'Range':
+        //   return <Range ref={item.field_name} read_only={this.props.read_only} handleChange={this.handleChange} mutable={true} key={`form_${item.id}`} data={item} defaultValue={this.props.answer_data[item.field_name]} />
       }
     })
 
