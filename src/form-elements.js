@@ -2,13 +2,13 @@ import React from 'react';
 import HeaderBar from './header-bar';
 import Select from 'react-select';
 import SignaturePad from 'react-signature-pad';
-import SortableItemMixin from 'react-sortable-items/SortableItemMixin';
+import SortableItemMixin from './SortableItemMixin';
 import SliderNativeBootstrap from 'react-bootstrap-native-slider';
 import ReactDatePicker from 'react-datepicker';
 import StarRating from './star-rating';
 import xss from 'xss';
 import moment from 'moment';
-var createReactClass = require('create-react-class');
+import createReactClass from 'create-react-class';
 
 let FormElements = {};
 let myxss = new xss.FilterXSS({

@@ -10,7 +10,7 @@ require('./css/application.css.scss');
 
 
 ReactDOM.render(
-  <FormBuilder.ReactFormBuilder variables={variables} />,
+  <ReactFormBuilder variables={variables} />,
   document.getElementById('form-builder')
 )
 

@@ -17,6 +17,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "fbemitter": "^2.1.1",
+    "immutability-helper": "^2.4.0",
     "jquery": "^3.2.1",
     "moment": "^2.19.1",
     "prop-types": "^15.6.0",
