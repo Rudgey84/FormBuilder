@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderBar from './header-bar'
 import TextAreaAutosize from 'react-textarea-autosize'
-import SortableItemMixin from 'SortableItemMixin'
+import SortableItemMixin from './SortableItemMixin'
 import createReactClass from 'create-react-class'
 
 export default createReactClass({
