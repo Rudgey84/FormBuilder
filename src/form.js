@@ -221,8 +221,8 @@ export default class ReactForm extends React.Component {
           return <Download download_path={this.props.download_path} mutable={true} key={`form_${item.id}`} data={item} />
         case 'Camera':
           return <Camera mutable={true} key={`form_${item.id}`} data={item} />
-        // case 'Range':
-        //   return <Range ref={item.field_name} read_only={this.props.read_only} handleChange={this.handleChange} mutable={true} key={`form_${item.id}`} data={item} defaultValue={this.props.answer_data[item.field_name]} />
+        case 'Range':
+          return <Range ref={item.field_name} read_only={this.props.read_only} handleChange={this.handleChange} mutable={true} key={`form_${item.id}`} data={item} defaultValue={this.props.answer_data[item.field_name]} />
       }
     })
 
