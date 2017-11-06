@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import DemoBar from './demobar';
-import FormBuilder from "./src/index";
+import FormBuilder from './src/index'
 import * as variables from './variables'
 import "babel-polyfill";
 

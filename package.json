@@ -19,6 +19,7 @@
     "fbemitter": "^2.1.1",
     "immutability-helper": "^2.4.0",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "prop-types": "^15.6.0",
     "react-anything-sortable": "^1.7.3",
@@ -30,6 +31,10 @@
     "react-textarea-autosize": "^5.1.0",
     "reflux": "^6.4.1",
     "xss": "^0.3.4"
+  },
+  "peerDependencies": {
+    "react": "@^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -48,6 +53,11 @@
     "css-loader": "^0.28.7",
     "draft-js": "^0.10.4",
     "draftjs-to-html": "^0.7.6",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "immutable": "^3.8.2",
     "jsdom": "^11.3.0",
@@ -55,8 +65,8 @@
     "mocha-jsdom": "^1.1.0",
     "node-libs-browser": "^2.0.0",
     "node-sass": "^4.5.3",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "react-draft-wysiwyg": "^1.10.12",
     "react-hot-loader": "^3.1.1",
     "react-star-rating": "^1.4.2",
