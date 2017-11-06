@@ -7,12 +7,10 @@ const extractSass = new ExtractTextPlugin({
 });
 
  module.exports = {
-
+    //context: path.join(__dirname, "src"),
     entry:  "./app.js",
-    output: {
-        filename: "app.js",
-        path: __dirname + "/build",
-            },
+    devtool:  "inline-sourcemap",
+    //output:  "./build/app.js",
 
   module: {
     loaders: [

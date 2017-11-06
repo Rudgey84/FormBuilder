@@ -2,8 +2,8 @@
   * <ReactFormBuilder />
   */
 
-import React from 'react';
-import Preview from './preview'
+import React from "react"
+import Preview from "./preview"
 import Toolbar from './toolbar'
 import ElementActions from './actions/ElementActions';
 import ReactFormGenerator from './form';
